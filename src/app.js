@@ -1,6 +1,7 @@
 import express from 'express';
 import productRoutes from './routes/products.routes.js';
 import contactosSoloRoutes from './routes/contactosSolo.routes.js';
+import nivelesSoloRoutes from './routes/nivelesSolo.routes.js';
 import cors from 'cors';
 
 const app =  express();
@@ -13,5 +14,6 @@ app.use(express.json());
 
 app.use(productRoutes);
 app.use(contactosSoloRoutes);
+app.use(nivelesSoloRoutes);
 
 export default app;

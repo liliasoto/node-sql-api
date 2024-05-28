@@ -1,3 +1,4 @@
+/*
 import express from 'express';
 import productRoutes from './routes/products.routes.js';
 import contactosSoloRoutes from './routes/contactosSolo.routes.js';
@@ -17,3 +18,4 @@ app.use(contactosSoloRoutes);
 app.use(nivelesSoloRoutes);
 
 export default app;
+*/

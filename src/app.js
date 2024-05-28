@@ -1,4 +1,3 @@
-/*
 import express from 'express';
 import productRoutes from './routes/products.routes.js';
 import contactosSoloRoutes from './routes/contactosSolo.routes.js';
@@ -16,32 +15,5 @@ app.use(express.json());
 app.use(productRoutes);
 app.use(contactosSoloRoutes);
 app.use(nivelesSoloRoutes);
-
-export default app;
-*/
-
-import express from 'express';
-import productRoutes from './routes/products.routes.js';
-import contactosSoloRoutes from './routes/contactosSolo.routes.js';
-import nivelesSoloRoutes from './routes/nivelesSolo.routes.js';
-import cors from 'cors';
-
-const app =  express();
-
-const PORT = 8000
-
-// Permitir todas las solicitudes CORS desde http://localhost:5173
-app.use(cors({ origin: 'http://localhost:5173' }));
-
-
-app.use(express.json());
-
-app.use(productRoutes);
-app.use(contactosSoloRoutes);
-app.use(nivelesSoloRoutes);
-
-app.listen(PORT, () => {
-    console.log(`✅ Server is running on port ${PORT}`);
-})
 
 export default app;

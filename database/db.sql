@@ -34,3 +34,26 @@ CREATE TABLE contactosSolo (
 CREATE DATABASE vitalcheck
 
 USE vitalcheck;
+
+-- Crear la tabla EstadoSalud
+CREATE TABLE EstadoSalud (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    nivel_oxigeno DECIMAL(5, 2) NOT NULL,
+    pulso_cardiaco INT NOT NULL,
+    fecha_hora DATETIME NOT NULL
+);
+
+-- Insertar datos en la tabla EstadoSalud
+INSERT INTO EstadoSalud (nivel_oxigeno, pulso_cardiaco, fecha_hora) VALUES 
+(98.89, 72, '2023-01-01 10:00:00'),
+(96.45, 75, '2023-02-01 10:00:00'),
+(95.78, 70, '2023-03-01 10:00:00'),
+(97.32, 73, '2023-04-01 10:00:00'),
+(99.10, 74, '2023-05-01 10:00:00'),
+(96.55, 72, '2023-06-01 10:00:00'),
+(97.25, 71, '2023-07-01 10:00:00'),
+(98.60, 75, '2023-08-01 10:00:00'),
+(96.40, 72, '2023-09-01 10:00:00'),
+(97.85, 74, '2023-10-01 10:00:00'),
+(98.99, 73, '2023-11-01 10:00:00'),
+(99.45, 71, '2023-12-01 10:00:00');

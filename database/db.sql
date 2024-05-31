@@ -57,3 +57,4 @@ INSERT INTO EstadoSalud (nivel_oxigeno, pulso_cardiaco, fecha_hora) VALUES
 (97.85, 74, '2023-10-01 10:00:00'),
 (98.99, 73, '2023-11-01 10:00:00'),
 (99.45, 71, '2023-12-01 10:00:00');
+

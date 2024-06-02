@@ -31,6 +31,15 @@ server: "localhost"
 database: "vitalcheck"
 ```
 
+### Conectar el dispositivo a la API
+
+Se debe tener en cuenta que se debe conectar el dispositivo Android a la API, esto se hace con los siguientes comandos
+
+```bash
+adb devices
+adb -s emulator-5554 reverse tcp:3000 tcp:3000
+```
+
 ### Ejecutar la API
 Asegurate de tener corriendo el contenedor de Docker, una vez corriendo sólo tienes que ejecutar el siguiente comando: 
 ```bash

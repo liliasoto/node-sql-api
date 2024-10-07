@@ -58,3 +58,26 @@ INSERT INTO EstadoSalud (nivel_oxigeno, pulso_cardiaco, fecha_hora) VALUES
 (98.99, 73, '2023-11-01 10:00:00'),
 (99.45, 71, '2023-12-01 10:00:00');
 
+USE vitalcheck;
+
+CREATE TABLE Usuarios (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    nombre_usuario VARCHAR(50) NOT NULL UNIQUE,
+    correo VARCHAR(100) NOT NULL UNIQUE,
+    contraseña VARCHAR(255) NOT NULL,
+    fecha_nacimiento DATE,
+    genero VARCHAR(10),
+    peso DECIMAL(5,2),
+    fecha_creacion DATETIME DEFAULT GETDATE()
+);
+
+USE vitalcheck;
+
+CREATE TABLE Medicion (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    nivel_oxigeno DECIMAL(5,2) NOT NULL,
+    pulso_cardiaco INT NOT NULL,
+    fecha_hora DATETIME NOT NULL,
+    usuario_id INT,
+    CONSTRAINT FK_UsuarioMedicion FOREIGN KEY (usuario_id) REFERENCES Usuarios(id)
+);
